@@ -12,12 +12,9 @@
 	  $st = $rasa->viewRasa();
 
 	  if (isset($_POST['Submit'])) {
-
-	  	$ket = $_POST['keterangan'];
-  		
+	  	$ket = $_POST['keterangan'];  		
  		$rasa->insertRasa($ket);
- 		var_dump($_POST);
-}
+	  }
 
 ?>    
 

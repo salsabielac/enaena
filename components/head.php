@@ -7,7 +7,6 @@
   <link rel="stylesheet" type="text/css" href="./assets/css/flat-admin.css">
 
   <!-- Theme -->
- 
   <link rel="stylesheet" type="text/css" href="./assets/css/theme/red.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/custom.css">
 

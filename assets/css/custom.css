@@ -1,3 +1,17 @@
-.form-control:focus{
-	
+.app-login {
+	background: #d73727;
+	padding: 0 !important;
+}
+
+.app-login .app-body .app-block .app-right-section {
+    background-color: #E74C3C;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    height: 100%;
+    position: relative;
+    padding: 4rem 6rem;
+}
+
+.app-login .app-body .app-block .app-right-section .app-info ul.list li .icon {
+	color: #d73727;
 }
