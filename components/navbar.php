@@ -1,10 +1,10 @@
-  <nav class="navbar navbar-default" id="navbar">
+<nav class="navbar navbar-default" id="navbar">
   <div class="container-fluid">
     <div class="navbar-collapse collapse in">
       <ul class="nav navbar-nav navbar-mobile">
         <li>
           <button type="button" class="sidebar-toggle">
-            <i class="fa fa-bars"></i>
+          <i class="fa fa-bars"></i>
           </button>
         </li>
         <li class="logo">
@@ -12,7 +12,7 @@
         </li>
         <li>
           <button type="button" class="navbar-toggle">
-            <img class="profile-img" src="./assets/images/profile.png">
+          <img class="profile-img" src="./assets/images/profile.png">
           </button>
         </li>
       </ul>
@@ -24,6 +24,7 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <!--
         <li class="dropdown notification">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <div class="icon"><i class="fa fa-shopping-basket" aria-hidden="true"></i></div>
@@ -40,6 +41,7 @@
             </ul>
           </div>
         </li>
+        -->
         <li class="dropdown notification warning">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <div class="icon"><i class="fa fa-comments" aria-hidden="true"></i></div>
