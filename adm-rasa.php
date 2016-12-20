@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html>
 
-<?php include 'components/head.php'; ?>    
+<?php 
+	  include 'components/head.php'; 
+	  include 'config/Database.php';
+	  include 'objects/Rasa.php';
+
+	  $database = new Database();
+	  $db = $database->getConnection();
+	  $rasa = new Rasa($db);
+	  $st = $rasa->viewRasa();
+
+	  if (isset($_POST['Submit'])) {
+
+	  	$ket = $_POST['keterangan'];
+  		
+ 		$rasa->insertRasa($ket);
+ 		var_dump($_POST);
+}
+
+?>    
 
 <body>
   <div class="app app-red">

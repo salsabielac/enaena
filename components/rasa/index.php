@@ -5,10 +5,12 @@
     <div class="card-body"><!-- card body start   -->
     <div class="row">
       <div class="col-md-12">
+      <form action="" method="POST">
         <label>Keterangan</label>
-        <input type="text" class="form-control" name="">
+        <input type="text" class="form-control" name="keterangan">
         <input type="submit" class="btn btn-danger" name="" value="Submit">
         <input type="reset" class="btn btn-danger" name="" value="Cancel">
+      </form>
       </div>
     </div>
     </div><!-- card body end  -->
@@ -22,35 +24,35 @@
           <thead>
             <tr>
               <th>No</th>
+              <th>Kode</th>
               <th>Keterangan</th>
               <th>Opsi</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>System Architect</td>
-              <td>
-                <a href="#"><i class="fa fa-pencil"></i></a>&nbsp;
-                <a href="#"><i class="fa fa-trash-o"></i></a>
-              </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Accountant</td>
-              <td>
-                <a href="#"><i class="fa fa-pencil"></i></a>&nbsp;
-                <a href="#"><i class="fa fa-trash-o"></i></a>
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Junior Technical Author</td>
-              <td>
-                <a href="#"><i class="fa fa-pencil"></i></a>&nbsp;
-                <a href="#"><i class="fa fa-trash-o"></i></a>
-              </td>
-            </tr>
+            <?php
+            $no = 1;
+            while ($row_category = $st->fetch(PDO::FETCH_ASSOC)){
+            extract($row_category);
+            echo "<tr>";
+              echo "<td>{$no}</td>";
+              echo "<td>{$id_rasa}</td>";
+              echo "<td>{$keterangan}</td>";
+              //Button EDIT
+              echo "<td>";
+                echo "<a href='#' class='btn btn-success btn-sm'>";
+                  echo "<span class='fa fa-pencil'></span>";
+                echo "</a>";
+                echo "&nbsp;";
+                //Button Delete
+                echo "<a href='#' class='btn btn-info btn-sm'>";
+                  echo "<span class='fa fa-trash-o'></span>";
+                echo "</a>";
+              echo "</td>";
+            echo "</tr>";
+            $no++;
+            }
+            ?>
           </tbody>
         </table>
       </div>
