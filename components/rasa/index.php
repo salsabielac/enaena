@@ -8,8 +8,8 @@
       <form action="" method="POST">
         <label>Keterangan</label>
         <input type="text" class="form-control" name="keterangan">
-        <input type="submit" class="btn btn-danger" name="" value="Submit">
-        <input type="reset" class="btn btn-danger" name="" value="Cancel">
+        <input type="submit" class="btn btn-danger" name="Submit">
+        <input type="reset" class="btn btn-danger"  name="Cancel">
       </form>
       </div>
     </div>

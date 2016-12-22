@@ -25,7 +25,17 @@ class Rasa {
 		$stmt = $this->conn->prepare($query);
 		$stmt->bindparam(':keterangan',$ket);
 		$stmt->execute();
+		header('location:adm-rasa.php');
 		return true;	
+	}
+
+	function deleteRasa($id){
+		$query = "DELETE FROM ".$this->tb_name." WHERE id = :id";
+		$stmt = $this->conn->prepare($query);
+		$stmt->bindparam(":id",$id);
+		$stmt->execute();
+		return true;
+
 	} 
 	
 }
