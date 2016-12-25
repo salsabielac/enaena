@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
 
-<?php 
-	  include 'components/head.php'; 
+<?php include 'components/head.php'; 
 	  include 'config/Database.php';
-	  include 'objects/Rasa.php';
-
-	  $database = new Database();
-	  $db = $database->getConnection();
-	  $rasa = new Rasa($db);
-	  $st = $rasa->viewRasa();
 
 	  if (isset($_POST['Submit'])) {
-	  	$ket = $_POST['keterangan'];  		
- 		$rasa->insertRasa($ket);
+	  	$set_ket = $_POST['keterangan'];
+	  	$query = $connect->query("INSERT INTO tb_rasa VALUES('','$set_ket')");
+
+	  	if ($query == true) {
+	  		header('location:adm-rasa.php?success');
+	  	} else {
+	  		header('location:adm-rasa.php?failure');
+	  	}
+	  }
+
+	  if (isset($_GET['id_rasa'])) {
+	  	 $id = $_GET['id_rasa'];
+	  	 $query = $connect->query("DELETE FROM tb_rasa WHERE id_rasa = '$id'");
+	  	 if ($query == true) {
+	  	 	header('location:adm-rasa.php?delete_success');
+	  	 }else{
+	  	 	header('location:adm-rasa.php?delete_failure');
+	  	 }
 	  }
 
 ?>    
@@ -27,7 +36,7 @@
 
     <?php include 'components/navbar.php'; ?>
 
-    <?php include 'components/rasa/index.php'; ?>
+    <?php include 'components/index_rasa.php'; ?>
 
     <?php include 'components/footer.php'; ?>
     </div>
