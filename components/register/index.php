@@ -44,7 +44,7 @@
           <div class="form-suggestion">
             Create an account for free.
           </div>
-          <form action="/" method="POST">
+          <form action="" method="POST">
               <div class="input-group">
                 <span class="input-group-addon" id="basic-addon1">
                   <i class="fa fa-paper-plane" aria-hidden="true"></i></span>

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-<?php include 'components/head.php'; 
-	  include 'config/Database.php';
+<?php 
+	  session_start();
+	  include '../components/head.php'; 
+	  include '../config/Database.php';
 
 	  if (isset($_GET['id_rasa'])) {
 	  	$id = $_GET['id_rasa'];
@@ -25,15 +27,15 @@
 <body>
   <div class="app app-red">
 
-    <?php include 'components/sidebar.php'; ?>
+    <?php include '../components/sidebar.php'; ?>
 
     <div class="app-container">
 
-    <?php include 'components/navbar.php'; ?>
+    <?php include '../components/navbar.php'; ?>
 
-    <?php include 'components/edit_rasa.php'; ?>
+    <?php include '../components/edit_rasa.php'; ?>
 
-    <?php include 'components/footer.php'; ?>
+    <?php include '../components/footer.php'; ?>
     </div>
   </div>
 

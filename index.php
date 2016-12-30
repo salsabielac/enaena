@@ -1,22 +1,11 @@
 <!DOCTYPE html>
 <html>
-
-<?php include 'components/head.php'; ?>    
-
+<head>
+	<title></title>
+</head>
 <body>
-  <div class="app app-red">
 
-    <?php include 'components/sidebar.php'; ?>
-
-    <div class="app-container">
-
-    <?php include 'components/navbar.php'; ?>
-
-    <?php include 'components/adm-dashboard.php'; ?>
-
-    <?php include 'components/footer.php'; ?>
-    </div>
-  </div>
+<h1>Hello World</h1>
 
 </body>
 </html>

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 
-<?php include 'components/head.php'; 
+<?php 
+	  session_start();
+	  include 'components/head.php'; 
 	  include 'config/Database.php';
 
 	  if (isset($_GET['id'])) {
