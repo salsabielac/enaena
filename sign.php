@@ -22,7 +22,7 @@
 	 		header('location:admin/index.php?success_login');
 	 	}else if($cemewew['role'] == 'user'){
 	 		$_SESSION['username'] = $usr;
-	 		header('location:index.php?success_login');
+	 		header('location:user/index.php?success_login');
 	 	}
 
 	 }

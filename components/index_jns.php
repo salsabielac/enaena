@@ -35,7 +35,6 @@
             $view = $connect->query("SELECT * FROM tb_jenis");
           $no = 1;
           while ($data = $view->fetch_assoc()) {
-            echo '<br>';
             echo '<tr>';
             echo '<td>' .$no. "</td>";
             echo '<td>' .$data['id']. '</td>';

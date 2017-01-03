@@ -17,6 +17,7 @@
 		$upload_dir = "../upload/".$imgFile;
 				
 		$jenis = $_POST['j_kue'];
+		$pb = $_POST['pem'];
 		$rasa = $_POST['rasa'];
 		$satuan = $_POST['h_satuan'];
 		$stok = $_POST['stok'];
@@ -24,10 +25,11 @@
 		if($typeImg == "image/jpeg" || $typeImg == "image/png"){
 		if($imgSize <= 1000000){
 			if(move_uploaded_file($tmp_dir,$upload_dir)){
-					$query = $connect->query("INSERT INTO tb_produk VALUES ('','$name','$desc','$imgFile','$jenis','$rasa','$satuan','$stok')");
+					$query = $connect->query("INSERT INTO tb_produk VALUES ('','$name','$desc','$imgFile','$jenis','$rasa','$pb','$satuan','$stok')");
 							if ($query == true) {
-								//var_dump($_FILES);
 								header('location:adm-produk-list.php?success');
+							}else{
+								var_dump($_POST);
 							}
 				}
 			}
@@ -61,6 +63,16 @@
 											$c = $connect->query("select * from tb_jenis");
 											while ($data = $c->fetch_assoc()) {
 											echo '<option value='.$data['id'].'>'.$data['ket_jenis'].'</option>';
+											}
+											?>
+										</select>
+										<label>Pembuatan</label>
+										<select class="form-control" name="pem" required autofocus="true">
+											<option>-- Pilih --</option>
+											<?php
+											$c = $connect->query("select * from tb_pembuatan");
+											while ($data = $c->fetch_assoc()) {
+											echo '<option value='.$data['id'].'>'.$data['rasa'].'</option>';
 											}
 											?>
 										</select>

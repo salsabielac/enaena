@@ -36,26 +36,16 @@
             <li><a href="#">Order Detail</a></li>
           </ul>
         </div>
-      </li>
-       <li class="dropdown">
-        <a href="#">
+
+        <li>
+        <a href="adm-user-list.php">
           <div class="icon">
             <i class="fa fa-user" aria-hidden="true"></i>
           </div>
-          <div class="title">User Management</div>
+          <div class="title">User</div>
         </a>
-         <div class="dropdown-menu">
-          <ul>
-            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> Admin</li>
-            <li><a href="#">Ngapain</a></li>
-            <li><a href="#">Ngapain</a></li>
-            <li class="line"></li> <!-- Pemisah 2 Dunia -->
-            <li class="section"><i class="fa fa-file-o" aria-hidden="true"></i> User</li>
-            <li><a href="#">Ngapain</a></li>
-            <li><a href="#">Ngapain</a></li>
-          </ul>
-        </div>
       </li>
+
       <li>
         <a href="#">
           <div class="icon">

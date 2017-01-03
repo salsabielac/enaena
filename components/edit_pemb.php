@@ -7,7 +7,7 @@
       <div class="col-md-12">
       <form action="" method="POST">
         <label>Keterangan</label>
-        <input value="<?php echo $extract['keterangan'] ?>" type="text" class="form-control" name="keterangan">
+        <input value="<?php echo $extract['rasa'] ?>" type="text" class="form-control" name="keterangan">
         <input type="submit" class="btn btn-danger" name="Submit">
         <input type="reset" class="btn btn-danger"  name="Cancel">
       </form>

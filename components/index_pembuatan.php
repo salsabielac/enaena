@@ -39,7 +39,7 @@
             echo '<tr>';
             echo '<td>' .$no. "</td>";
             echo '<td>' .$data['id']. '</td>';
-            echo '<td>' .$data['keterangan']. '</td>';  
+            echo '<td>' .$data['rasa']. '</td>';  
              echo '<td>';
                 echo '<a class="btn btn-success btn-sm" href="adm-pembuatan-edit.php?id='.$data['id'].'" >';
                   echo '<span class="fa fa-pencil"></span>';
