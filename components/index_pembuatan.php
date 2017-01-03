@@ -8,8 +8,8 @@
       <form action="" method="POST">
         <label>Keterangan</label>
         <input type="text" class="form-control" name="keterangan">
-        <input type="submit" class="btn btn-danger" name="" value="Submit">
-        <input type="reset" class="btn btn-danger" name="" value="Cancel">
+        <input type="submit" class="btn btn-danger" name="Submit">
+        <input type="reset" class="btn btn-danger"  name="Cancel">
       </form>
       </div>
     </div>
@@ -32,26 +32,28 @@
           <tbody>
             <?php
             $no = 1;
-            while ($row_category = $st->fetch(PDO::FETCH_ASSOC)){
-            extract($row_category);
-            echo "<tr>";
-              echo "<td>{$no}</td>";
-              echo "<td>{$id_rasa}</td>";
-              echo "<td>{$keterangan}</td>";
-              //Button EDIT
-              echo "<td>";
-                echo "<a href='#' class='btn btn-success btn-sm'>";
-                  echo "<span class='fa fa-pencil'></span>";
-                echo "</a>";
+            $view = $connect->query("SELECT * FROM tb_pembuatan");
+          $no = 1;
+          while ($data = $view->fetch_assoc()) {
+            echo '<br>';
+            echo '<tr>';
+            echo '<td>' .$no. "</td>";
+            echo '<td>' .$data['id']. '</td>';
+            echo '<td>' .$data['rasa']. '</td>';  
+             echo '<td>';
+                echo '<a class="btn btn-success btn-sm" href="adm-pembuatan-edit.php?id='.$data['id'].'" >';
+                  echo '<span class="fa fa-pencil"></span>';
+                echo '</a>';
                 echo "&nbsp;";
                 //Button Delete
-                echo "<a href='#' class='btn btn-info btn-sm'>";
-                  echo "<span class='fa fa-trash-o'></span>";
-                echo "</a>";
-              echo "</td>";
-            echo "</tr>";
+                echo '<a class="btn btn-danger btn-sm" href="adm-pembuatan.php?id='.$data['id'].'" >';
+                  echo '<span class="fa fa-trash"></span>';
+                echo '</a>';
+              echo '</td>';
+            echo '</tr>';
             $no++;
-            }
+           }
+           
             ?>
           </tbody>
         </table>

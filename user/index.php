@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <?php 
-	  include 'frontend/head.php'; 
-	  include 'config/Database.php';
+	  include '../frontend/head.php'; 
+	  include '../config/Database.php';
 	  ?>
 <body>
   <div class="app app-red">
     <div class="app-container">
     <?php 
-	include 'frontend/sidebar.php';
-	include 'frontend/navbar.php'; 	
+	include '../frontend/sidebar.php';
+	include '../frontend/navbar-user.php'; 	
 	?>
     <div class="row">
     <?php 
@@ -25,7 +25,7 @@
     		</div>
     		<div class="card-body">
 	    		<div class="thumbnail">
-	    			<img class="img-thumbnail" src='upload/<?php echo $data['image']; ?>'>
+	    			<img class="img-thumbnail" src='../upload/<?php echo $data['image']; ?>'>
 	    		</div>
 				<label>Harga Rp.<?php echo $data['harga_satuan']; ?></label>
     		</div>
@@ -42,7 +42,7 @@
     <?php } ?>
     </div>
 
-    <?php include 'frontend/footer.php'; ?>
+    <?php include '../frontend/footer.php'; ?>
     </div>
   </div>
 

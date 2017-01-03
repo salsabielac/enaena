@@ -28,6 +28,23 @@
                 echo $new; ?>
             </a>        
         </li>
+
+        <li class="dropdown notification">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="icon"><i class="fa fa-shopping-basket" aria-hidden="true"></i></div>
+            <div class="title">New Orders</div>
+            <div class="count">0</div>
+          </a>
+          <div class="dropdown-menu">
+            <ul>
+              <li class="dropdown-header">Ordering</li>
+              <li class="dropdown-empty">No New Ordered</li>
+              <li class="dropdown-footer">
+                <a href="#">View All <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+        </li> 
        
         <li class="dropdown notification danger">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -37,6 +54,9 @@
           </a>
           <div class="dropdown-menu">
             <ul>
+
+              
+
               <li class="dropdown-header">Notification</li>
               <li>
                 <a href="#">
