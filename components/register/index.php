@@ -44,29 +44,25 @@
           <div class="form-suggestion">
             Create an account for free.
           </div>
-          <form action="" method="POST">
+          <form method="POST">
+          <label>Fullname</label>
               <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1">
-                  <i class="fa fa-paper-plane" aria-hidden="true"></i></span>
-                <input type="text" class="form-control" placeholder="Fullname" aria-describedby="basic-addon1">
+                <input name="fullname" type="text" class="form-control">
               </div>
+              <label>Birth Date</label>
               <div class="input-group">
-                <span class="input-group-addon" id="basic-addon2">
-                  <i class="fa fa-user" aria-hidden="true"></i></span>
-                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon2">
+                <input name="bd" type="date" class="form-control">
               </div>
-              <div class="input-group">
-                <span class="input-group-addon" id="basic-addon3">
-                  <i class="fa fa-key" aria-hidden="true"></i></span>
-                <input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon3">
+              <label>Username</label>
+             <div class="input-group">
+                <input name="username" type="text" class="form-control">
               </div>
-              <div class="input-group">
-                <span class="input-group-addon" id="basic-addon4">
-                  <i class="fa fa-check" aria-hidden="true"></i></span>
-                <input type="text" class="form-control" placeholder="Confirm Password" aria-describedby="basic-addon4">
+              <label>Password</label>
+             <div class="input-group">
+                <input name="password" type="password" class="form-control">
               </div>
               <div class="text-center">
-                  <input type="submit" class="btn btn-danger btn-submit" value="Register">
+                  <input name="submit" type="submit" class="btn btn-danger btn-submit" value="Register">
               </div>
           </form>
           <div class="form-line">

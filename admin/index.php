@@ -3,8 +3,8 @@
 
 <?php 
 	session_start();
-  include '../config/Check.php';
-	include '../components/head.php'; ?>    
+  	include '../config/Check.php';
+	  include '../components/head.php'; ?>    
 
 <body>
   <div class="app app-red">

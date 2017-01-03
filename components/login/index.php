@@ -18,7 +18,6 @@
         <div class="form-header">
           <div class="app-brand"><span class="highlight">Login</span> Page</div>
         </div>
-
         <form method="POST">
             <div class="input-group">
               <span class="input-group-addon" id="basic-addon1">
@@ -33,6 +32,10 @@
             <div class="text-center">
                 <input name="Login" type="submit" class="btn btn-danger btn-submit" value="Login">
             </div>
+            <br>
+            <center>
+            <label>Belum punya akun? daftar<a href="signup.php">&nbsp;disini</a></label>
+            </center>
         </form>
       </div>
       </div>

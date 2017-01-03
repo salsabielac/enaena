@@ -27,7 +27,6 @@
 											<th>#</th>
 											<th>Kode</th>
 											<th>Nama Kue</th>
-											<th>Deskripsi</th>
 											<th>Harga Satuan</th>
 											<th>Stok</th>
 											<th>Opsi</th>
@@ -39,53 +38,33 @@
 										$view = $connect->query("SELECT * FROM tb_produk");
 										$no = 1;
 										while ($data = $view->fetch_assoc()) {
-										echo '<br>';
-										echo '<tr>';
-											echo '<td>' .$no. '</td>';
-											echo '<td>' .$data['id_produk']. '</td>';
-											echo '<td>' .$data['nama_produk']. '</td>';
-											echo '<td>' .$data['deskripsi_produk']. '</td>';
-											echo '<td>' .$data['harga_satuan']. '</td>';
-											echo '<td>' .$data['stok']. '</td>';
-											echo '<td>';
-												echo '<a href="" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal"
-													>';
-													echo '<span class="fa fa-eye"></span>';
-												echo '</a>';
-												echo "&nbsp;";
-												echo '<a class="btn btn-success btn-sm" href="adm-produk-edit.php?id_produk='.$data['id_produk'].'" >';
-													echo '<span class="fa fa-pencil"></span>';
-												echo '</a>';
-												echo "&nbsp;";
-												//Button Delete
-												echo '<a class="btn btn-danger btn-sm" href="adm-produk-del.php?id_produk='.$data['id_produk'].'" >';
-													echo '<span class="fa fa-trash"></span>';
-												echo '</a>';
-											echo '</td>';
-										echo '</tr>';
+										?>	
+									
+										<tr>
+											<td><?php echo $no ?></td>
+											<td><?php echo $data['id_produk'] ?></td>
+											<td><?php echo $data['nama_produk'] ?></td>
+											
+											<td><?php echo $data['harga_satuan'] ?></td>
+											<td><?php echo $data['stok'] ?></td>
+											<td>
+												<a class="btn btn-primary btn-sm" >
+													<span class="fa fa-eye"></span>
+												</a>
+												<a class="btn btn-success btn-sm" href="adm-produk-edit.php?id_produk=<?php echo $data['id_produk'] ?>">
+													<span class="fa fa-pencil"></span>
+												</a>
+												<a class="btn btn-danger btn-sm" href="adm-produk-del.php?id_produk=<?php echo $data['id_produk'] ?>">
+													<span class="fa fa-trash"></span>
+												</a>
+										   </td>
+										</tr>
+										<?php
 										$no++;
 										}
 										?>
-
 									</tbody>
 								</table>
-								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-												<h4 class="modal-title"><?php var_dump($_GET) ?></h4>
-											</div>
-											<div class="modal-body">
-												<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl</p>
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-												<button type="button" class="btn btn-sm btn-success">Save changes</button>
-											</div>
-										</div>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>

@@ -11,22 +11,26 @@
 
 		$imgFile = $_FILES['gambar']['name'];
 		$tmp_dir = $_FILES['gambar']['tmp_name'];
+		$typeImg = $_FILES['gambar']['type'];
 		$imgSize = $_FILES['gambar']['size'];
 		
-		$upload_dir = 'upld/';
-		$imgExt = strtolower(pathinfo($imgFile,PATHINFO_EXTENSION));
-		$valid_extensions = array('jpeg', 'jpg', 'png', 'gif');
-		$itempic = rand(1000,1000000).".".$imgExt;
-		
+		$upload_dir = "../upload/".$imgFile;
+				
 		$jenis = $_POST['j_kue'];
 		$rasa = $_POST['rasa'];
 		$satuan = $_POST['h_satuan'];
 		$stok = $_POST['stok'];
-		$query = $connect->query("INSERT INTO tb_produk VALUES ('','$name','$desc','$itempic','$jenis','$rasa','$satuan','$stok')");
 
-		if ($query == true) {
-			move_uploaded_file($tmp_dir,$upload_dir.$itempic);
-			header('location:adm-produk-list.php?success');
+		if($typeImg == "image/jpeg" || $typeImg == "image/png"){
+		if($imgSize <= 1000000){
+			if(move_uploaded_file($tmp_dir,$upload_dir)){
+					$query = $connect->query("INSERT INTO tb_produk VALUES ('','$name','$desc','$imgFile','$jenis','$rasa','$satuan','$stok')");
+							if ($query == true) {
+								//var_dump($_FILES);
+								header('location:adm-produk-list.php?success');
+							}
+				}
+			}
 		}
 	}
 
